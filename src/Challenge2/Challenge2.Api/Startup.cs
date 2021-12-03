@@ -1,6 +1,6 @@
 using Application;
-using Challenge1.Api.Extensions;
-using Infraestructure;
+using Challenge2.Api.Utilities.CSV;
+using Challenge2.Api.Utilities.JSON;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -9,7 +9,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System.Text.Json.Serialization;
 
-namespace Challenge1.Api
+namespace Challenge2.Api
 {
     public class Startup
     {
@@ -23,14 +23,16 @@ namespace Challenge1.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddInfraestructure(Configuration);
             services.AddApplication(Configuration);
+            services.AddScoped<IJsonConvert, ConvertToJson>();
+            services.AddScoped<ICSVConvert, ConvertToCSV>();
 
             services.AddControllers().AddJsonOptions(x =>
             x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);
+
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Challenge1.Api", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Challenge2.Api", Version = "v1" });
             });
         }
 
@@ -41,7 +43,7 @@ namespace Challenge1.Api
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Challenge1.Api v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Challenge2.Api v1"));
             }
 
             app.UseHttpsRedirection();
@@ -49,12 +51,6 @@ namespace Challenge1.Api
             app.UseRouting();
 
             app.UseAuthorization();
-
-            #region Custom Middleware
-
-            app.UseErrorHandlingMiddleware();
-
-            #endregion Custom Middleware
 
             app.UseEndpoints(endpoints =>
             {
