@@ -10,14 +10,14 @@ namespace Challenge2.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CurrencyController : ControllerBase
+    public class CurrenciesController : ControllerBase
     {
         private readonly ICurrencyService _currencyService;
         private readonly ICurrencyConversionService _currencyConversionService;
         private readonly IJsonConvert _jsonConvert;
         private readonly ICSVConvert _cSVConvert;
 
-        public CurrencyController
+        public CurrenciesController
             (ICurrencyService currencyService,
             ICurrencyConversionService currencyConversionService,
             IJsonConvert jsonConvert,
