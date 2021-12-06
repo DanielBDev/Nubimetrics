@@ -21,15 +21,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Services", "2-Services", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenge1.Api", "src\Challenge1\Challenge1.Api\Challenge1.Api.csproj", "{C0A62CB4-4252-4568-9CBF-4AED89661477}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "src\Challenge1\Domain\Domain.csproj", "{F0F1C336-1ED2-4762-BB28-07C60C5E292C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "src\Challenge1\Domain\Domain.csproj", "{F0F1C336-1ED2-4762-BB28-07C60C5E292C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestructure", "src\Challenge1\Infraestructure\Infraestructure.csproj", "{A6D4D632-1F91-4ABD-95F4-C13206442DF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infraestructure", "src\Challenge1\Infraestructure\Infraestructure.csproj", "{A6D4D632-1F91-4ABD-95F4-C13206442DF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "src\Challenge1\Application\Application.csproj", "{B8DCD6A6-0F07-441D-8072-85BECB6B225E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "src\Challenge1\Application\Application.csproj", "{B8DCD6A6-0F07-441D-8072-85BECB6B225E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge2.Api", "src\Challenge2\Challenge2.Api\Challenge2.Api.csproj", "{BCC16A44-95DC-4123-8460-886FABF71ED5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenge2.Api", "src\Challenge2\Challenge2.Api\Challenge2.Api.csproj", "{BCC16A44-95DC-4123-8460-886FABF71ED5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "src\Challenge2\Application\Application.csproj", "{CA5FA999-6B26-413C-8AB1-737604B3C62E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "src\Challenge2\Application\Application.csproj", "{CA5FA999-6B26-413C-8AB1-737604B3C62E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5-Script", "5-Script", "{F2A20441-6316-412F-A6E5-1BAB7E0A57AD}"
+	ProjectSection(SolutionItems) = preProject
+		src\Challenge1\Script\SQLScriptDb.sql = src\Challenge1\Script\SQLScriptDb.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -78,6 +83,7 @@ Global
 		{B8DCD6A6-0F07-441D-8072-85BECB6B225E} = {62277D12-D73B-40CE-82AC-E5251CEAA032}
 		{BCC16A44-95DC-4123-8460-886FABF71ED5} = {A05EE79D-76D1-4685-90EA-AC2722291033}
 		{CA5FA999-6B26-413C-8AB1-737604B3C62E} = {66AECDD3-A6CF-4586-96D9-40D90839C575}
+		{F2A20441-6316-412F-A6E5-1BAB7E0A57AD} = {9B70466B-B0E0-4C67-86DC-FBA7883C90B7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {413E6CDE-7107-4DA4-A4B9-2C8D1521BC89}
